@@ -8,15 +8,15 @@ public class Programa {
 		
 		File arquivo = new File("C:\\Users\\09586779998\\Desktop\\Rafael-Pavelski-Desenvolvimento-Software\\Aula 04\\Exercício 07\\src\\alunos.csv");
 		Scanner leitor = new Scanner(arquivo);
-		leitor.nextLine();
+		leitor.nextLine(); // Saltar o título
 		
 		Aluno[] alunos = new Aluno[5];
 		int contador = 0;
 		
 		while(leitor.hasNext()) {
-			String linha = leitor.nextLine();
-			String[] dados = linha.split(";");
-			String matricula = dados[0];
+			String linha = leitor.nextLine(); // Lê a primeira linha
+			String[] dados = linha.split(";"); // Separa os dados
+			String matricula = dados[0]; // Recebe os dados em seus respectivos espaços no array
 			String nome = dados[1];
 			String nota1 = dados[2];
 			String nota2 = dados[3];
@@ -49,7 +49,9 @@ public class Programa {
 		 for (int i = 0; i < alunos.length; i++) {
 		 Aluno a = alunos[i];
 		 System.out.println("Matrícula: " + a.matricula); System.out.println("Nome: " + a.nome); System.out.println("Nota 1: " + a.nota1);
-		 System.out.println("Nota 2: " + a.nota2); System.out.println("Nota 3: " + a.nota3); System.out.println(); }
+		 System.out.println("Nota 2: " + a.nota2); System.out.println("Nota 3: " + a.nota3);
+		 System.out.println("Nota Final: " + a.getNotaFinal());
+		 System.out.println(); }
 		 
 		leitor.close();
 		
