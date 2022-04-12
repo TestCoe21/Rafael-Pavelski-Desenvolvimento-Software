@@ -10,32 +10,70 @@ public class ex08 {
 		Scanner leitor = new Scanner(arquivo);
 		leitor.nextLine();
 		
+		int grupoA = 0;
+		int grupoB = 0;
+		int grupoC = 0;
+		int grupoD = 0;
+		int grupoE = 0;
+		int grupoF = 0;
+		
 		while(leitor.hasNext()) {
 			String linha = leitor.nextLine();
 //			System.out.println(linha);
-			
-			String[] dadoLinha = linha.split("\t");
+			String[] dadosLinha = linha.split("\t");
 //			System.out.println("Grupo: " + dadoLinha[0]);
 //			System.out.println("Valor: " + dadoLinha[1]);
 //			System.out.println("\t");
 			
-			if (dadoLinha[0].equals("A")) {
-//				System.out.println(dadoLinha[1]);
-				int valor = Integer.parseInt(dadoLinha[1]);
-				System.out.println();
-			}
+			switch (dadosLinha[0]) {
+			case "A":
+				grupoA += getValor(dadosLinha[1]);
+				break;
+				
+			case "B":
+				grupoB += getValor(dadosLinha[1]);
+				break;
+				
+			case "C":
+				grupoC += getValor(dadosLinha[1]);
+				break;
+				
+			case "D":
+				grupoD += getValor(dadosLinha[1]);
+				break;
+				
+			case "E":
+				grupoE += getValor(dadosLinha[1]);
+				break;
+				
+			case "F":
+				grupoF += getValor(dadosLinha[1]);
+				break;
 			
-			if (dadoLinha[0].equals("B")) {
-				System.out.println(dadoLinha[1]);
-				System.out.println();
 			}
-			
-//			 Calcular o total por grupo
-//			 Calcular o total geral
+
 		}
+		
+		imprimirGrupo("A", grupoA);
+		imprimirGrupo("B", grupoB);
+		imprimirGrupo("C", grupoC);
+		imprimirGrupo("D", grupoD);
+		imprimirGrupo("E", grupoE);
+		imprimirGrupo("F", grupoF);
+		
+		int total = grupoA + grupoB + grupoC + grupoD + grupoE + grupoF;
+		System.out.println("Valor total: " + total);
 		
 		leitor.close();
 		
 	}
+	
+	public static void imprimirGrupo(String letra, int vlr) {
+		System.out.println("Valor total do grupo " + letra + ": " + vlr);
+	}
 
+	public static int getValor(String vlr) {
+		return Integer.parseInt(vlr);
+	}
+	
 }
