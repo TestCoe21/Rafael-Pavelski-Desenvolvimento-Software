@@ -28,15 +28,17 @@ public class ex09 {
 		
 		try {
 			
-			Formatter gravador = new Formatter("C:\\Users\\09586779998\\Desktop\\Aula 06\\src");
+			Formatter gravador = new Formatter("C:\\Users\\09586779998\\Desktop\\Rafael-Pavelski-Desenvolvimento-Software\\Aula 06\\src\\relatorio-de-grupos.txt");
 			
 			int vlrTotal = 0;
 			for (int i = 0; i < grupos.length; i++) {
 				Grupo grp = grupos[i];
-				gravador.format("Valor do grupo " + grp.letra + ": " + grp.getValor());  
+				gravador.format("Valor do grupo " + grp.letra + ": " + grp.getValor() + "\n");  
 				vlrTotal += grp.getValor();
 			}
 			
+			gravador.format("Valor total: " + vlrTotal);
+			gravador.close();
 			
 		} catch (FileNotFoundException e) {
 			
@@ -98,7 +100,7 @@ public class ex09 {
 	}
 	
 	public static Scanner getLeitor() {
-		File arquivo = new File("C:\\Users\\09586779998\\Desktop\\Aula 06\\src\\grupos-tabulados.txt");
+		File arquivo = new File("C:\\Users\\09586779998\\Desktop\\Rafael-Pavelski-Desenvolvimento-Software\\Aula 06\\src\\grupos-tabulados.txt");
 		
 		Scanner leitor = null;
 		try {
