@@ -1,0 +1,18 @@
+package br.edu.up;
+
+public class Programa {
+
+	public static void main(String[] args) {
+		
+//		INSERT into cliente (nome, cpf, data_nasc, email)
+//		VALUES ('Joao', '12345678998', '10/03/2000', 'joao@gmail.com')
+		
+//		select * from cliente
+		
+//		UPDATE cliente set email = 'pedro@hmail.com'
+//				WHERE codigo = 1
+
+
+	}
+
+}

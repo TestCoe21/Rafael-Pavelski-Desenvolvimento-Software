@@ -1,0 +1,22 @@
+package br.edu.up;
+
+public class Programa {
+
+	public static void main(String[] args) {
+		
+		String url = "jdb:sqlite:???";
+		
+//		INSERT into cliente (nome, cpf, data_nasc, email)
+//		VALUES ('Joao', '12345678998', '2000/10/03', 'joao@gmail.com')
+		
+//		select * from cliente
+		
+//		UPDATE cliente set email = 'pedro@hmail.com'
+//				WHERE codigo = 1
+		
+//		DELETE from cliente WHERE codigo = 2
+
+
+	}
+
+}
