@@ -1,0 +1,14 @@
+package br.edu.up.model;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Carro {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private String id;
+	private String cor;
+	private String marca;
+
+}
